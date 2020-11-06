@@ -1,0 +1,14 @@
+[
+  {
+    "Name" : "Router",
+    "Profile" : "BAC-5051E",
+    "Description" : "Router",
+    "Labels" : ["router"],
+    "Protocols" : {
+    	"Bacnet-IP" : {
+      	"DeviceInstance": 1252,
+        "Port": 47808
+      }
+    }
+  }
+]

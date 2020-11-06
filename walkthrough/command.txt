@@ -1,0 +1,1 @@
+http://edgex-core-command:48082/api/v1/device/6ef80322-a97a-4cc1-bbaf-bb4ddee60045/command/fd9cb865-c19c-4d78-b57c-37628b57e533

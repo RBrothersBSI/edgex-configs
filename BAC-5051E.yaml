@@ -1,0 +1,796 @@
+name: "BAC-5051E"
+manufacturer: "KMC"
+model: "BAC-5051E"
+labels: 
+    - "router"
+description: "KMC BAC-5051E BACnet router"
+deviceResources:
+    -   
+        name: Name
+        description: "Get the device name"
+        attributes: 
+            { type: "device", instance: "-1", property: "objectName", index: "none"  }
+        properties: 
+            value:
+                { type: "String", readWrite: "RW"  }
+            units:
+                { type: "String", readWrite: "R"  }
+    -
+        name: Location
+        description: "Get the device location"
+        attributes:
+          { type: "device", instance: "-1", property: "58", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: DeviceDescription
+        description: "Get the device description"
+        attributes:
+          { type: "device", instance: "-1", property: "28", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: ModelName
+        description: "Get the device Model Name"
+        attributes:
+          { type: "device", instance: "-1", property: "70", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: VendorName
+        description: "Get the device Vendor Name"
+        attributes:
+          { type: "device", instance: "-1", property: "121", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: MaxInfoFrames
+        description: "Get the device Max Info Frames"
+        attributes:
+          { type: "device", instance: "-1", property: "63", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: APDURetries
+        description: "Get the device APDU retries"
+        attributes:
+          { type: "device", instance: "-1", property: "73", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: APDUTimeout
+        description: "Get the device APDU Timout"
+        attributes:
+          { type: "device", instance: "-1", property: "11", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R", defaultValue: "MilliSeconds"  }
+    -
+        name: APDUSegTimeout
+        description: "Get the device APDU Timout"
+        attributes:
+          { type: "device", instance: "-1", property: "10", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R", defaultValue: "MilliSeconds"  }
+    -
+        name: MaxMasters
+        description: "Get the device APDU Timout"
+        attributes:
+          { type: "device", instance: "-1", property: "64", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: AlignIntervals
+        description: "Does the device align intervals"
+        attributes:
+          { type: "device", instance: "-1", property: "193", index: "none"  }
+        properties:
+          value:
+            { type: "Bool", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: MaxAPDULengthAccepted
+        description: "Does the device max APDU length accepted"
+        attributes:
+          { type: "device", instance: "-1", property: "62", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: DaylightSavingsStatus
+        description: "Does the device align intervals"
+        attributes:
+          { type: "device", instance: "-1", property: "24", index: "none"  }
+        properties:
+          value:
+            { type: "Bool", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: MaxSegmentsAccepted
+        description: "Max Segments Accepted for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "167", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: AppSoftwareVersion
+        description: "Get the Application software version"
+        attributes:
+          { type: "device", instance: "-1", property: "12", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: FirmwareRevision
+        description: "Get the Application Firmware revision"
+        attributes:
+          { type: "device", instance: "-1", property: "44", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: TimeSyncInterval
+        description: "Max Segments Accepted for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "204", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: VendorIdentifier
+        description: "Get the vendor ID for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "120", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: UTCOffset
+        description: "Get the UTC Offset for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "119", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: BackupFailureTimeout
+        description: "Get the Backup Failure for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "153", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: DatabaseRevision
+        description: "Get the Backup Failure for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "155", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: IntervalOffset
+        description: "Get the interval offset for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "195", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: ProtocolRevision
+        description: "Get the protocol revision for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "139", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+    -
+        name: ProtocolVersion
+        description: "Get the protocol version for the device"
+        attributes:
+          { type: "device", instance: "-1", property: "98", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R" }
+          units:
+            { type: "String", readWrite: "R" }
+coreCommands:
+  - 
+    name: Name
+    get:
+      path: '/api/v1/device/{deviceId}/Name'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - Name
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+    put:
+      path: '/api/v1/device/{deviceId}/Name'
+      parameterNames: ["Name"]
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: []
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: Location
+    get:
+      path: '/api/v1/device/{deviceId}/Location'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - Location
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: DeviceDescription
+    get:
+      path: '/api/v1/device/{deviceId}/DeviceDescription'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - DeviceDescription
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: ModelName
+    get:
+      path: '/api/v1/device/{deviceId}/ModelName'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - ModelName
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: VendorName
+    get:
+      path: '/api/v1/device/{deviceId}/VendorName'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - VendorName
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: MaxInfoFrames
+    get:
+      path: '/api/v1/device/{deviceId}/MaxInfoFrames'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - MaxInfoFrames
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: APDURetries
+    get:
+      path: '/api/v1/device/{deviceId}/APDURetries'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - APDURetries
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: APDUTimeout
+    get:
+      path: '/api/v1/device/{deviceId}/APDUTimeout'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - APDUTimeout
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: APDUSegTimeout
+    get:
+      path: '/api/v1/device/{deviceId}/APDUSegTimeout'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - APDUSegTimeout
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: MaxMasters
+    get:
+      path: '/api/v1/device/{deviceId}/MaxMasters'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - MaxMasters
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: AlignIntervals
+    get:
+      path: '/api/v1/device/{deviceId}/AlignIntervals'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - AlignIntervals
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: MaxAPDULengthAccepted
+    get:
+      path: '/api/v1/device/{deviceId}/MaxAPDULengthAccepted'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - MaxAPDULengthAccepted
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: DaylightSavingsStatus
+    get:
+      path: '/api/v1/device/{deviceId}/DaylightSavingsStatus'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - DaylightSavingsStatus
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: MaxSegmentsAccepted
+    get:
+      path: '/api/v1/device/{deviceId}/MaxSegmentsAccepted'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - MaxSegmentsAccepted
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: AppSoftwareVersion
+    get:
+      path: '/api/v1/device/{deviceId}/AppSoftwareVersion'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - AppSoftwareVersion
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: FirmwareRevision
+    get:
+      path: '/api/v1/device/{deviceId}/FirmwareRevision'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - FirmwareRevision
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: TimeSyncInterval
+    get:
+      path: '/api/v1/device/{deviceId}/TimeSyncInterval'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - TimeSyncInterval
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: VendorIdentifier
+    get:
+      path: '/api/v1/device/{deviceId}/VendorIdentifier'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - VendorIdentifier
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: UTCOffset
+    get:
+      path: '/api/v1/device/{deviceId}/UTCOffset'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - UTCOffset
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: BackupFailureTimeout
+    get:
+      path: '/api/v1/device/{deviceId}/BackupFailureTimeout'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - BackupFailureTimeout
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: DatabaseRevision
+    get:
+      path: '/api/v1/device/{deviceId}/DatabaseRevision'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - DatabaseRevision
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: IntervalOffset
+    get:
+      path: '/api/v1/device/{deviceId}/IntervalOffset'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - IntervalOffset
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: ProtocolRevision
+    get:
+      path: '/api/v1/device/{deviceId}/ProtocolRevision'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - ProtocolRevision
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: ProtocolVersion
+    get:
+      path: '/api/v1/device/{deviceId}/ProtocolVersion'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - ProtocolVersion
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []

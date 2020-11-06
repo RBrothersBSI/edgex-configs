@@ -1,0 +1,337 @@
+name: "Distech AHU Controller"
+manufacturer: "Distech"
+model: "ECB 450"
+labels: 
+    - "distech"
+    - "ahu"
+description: "Distech 450 AHU controller"
+deviceResources:
+    -   
+        name: Name
+        description: "Get the device name"
+        attributes: 
+            { type: "device", instance: "-1", property: "objectName", index: "none"  }
+        properties: 
+            value:
+                { type: "String", readWrite: "RW"  }
+            units:
+                { type: "String", readWrite: "R"  }
+    -
+        name: Location
+        description: "Get the device location"
+        attributes:
+          { type: "device", instance: "-1", property: "58", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: ModelName
+        description: "Get the device Model Name"
+        attributes:
+          { type: "device", instance: "-1", property: "70", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: VendorName
+        description: "Get the device Vendor Name"
+        attributes:
+          { type: "device", instance: "-1", property: "121", index: "none"  }
+        properties:
+          value:
+            { type: "String", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: MaxInfoFrames
+        description: "Get the device Max Info Frames"
+        attributes:
+          { type: "device", instance: "-1", property: "63", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: APDURetries
+        description: "Get the device APDU retries"
+        attributes:
+          { type: "device", instance: "-1", property: "73", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: APDUTimeout
+        description: "Get the device APDU Timout"
+        attributes:
+          { type: "device", instance: "-1", property: "11", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R", defaultValue: "MilliSeconds"  }
+    -
+        name: MaxMasters
+        description: "Get the device APDU Timout"
+        attributes:
+          { type: "device", instance: "-1", property: "64", index: "none"  }
+        properties:
+          value:
+            { type: "Uint32", readWrite: "R"  }
+          units:
+            { type: "String", readWrite: "R"  }
+    -
+        name: SpaceTemp
+        description: "Shared Space Temp"
+        attributes:
+          { type: "analogValue", instance: "1", property: "presentValue", index: "none"  }
+        properties:
+          value:
+            { type: "Float32", floatEncoding: "eNotation", readWrite: "RW"  }
+          units:
+            { type: "String", readWrite: "R", defaultValue: "Degrees Fahrenheit"  }
+coreCommands:
+  - 
+    name: Name
+    get:
+      path: '/api/v1/device/{deviceId}/Name'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - Name
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+    put:
+      path: '/api/v1/device/{deviceId}/Name'
+      parameterNames: ["Name"]
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: []
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: Location
+    get:
+      path: '/api/v1/device/{deviceId}/Location'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - Location
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: ModelName
+    get:
+      path: '/api/v1/device/{deviceId}/ModelName'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - ModelName
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: VendorName
+    get:
+      path: '/api/v1/device/{deviceId}/VendorName'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - VendorName
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: MaxInfoFrames
+    get:
+      path: '/api/v1/device/{deviceId}/MaxInfoFrames'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - MaxInfoFrames
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: APDURetries
+    get:
+      path: '/api/v1/device/{deviceId}/APDURetries'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - APDURetries
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: APDUTimeout
+    get:
+      path: '/api/v1/device/{deviceId}/APDUTimeout'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - APDUTimeout
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: MaxMasters
+    get:
+      path: '/api/v1/device/{deviceId}/MaxMasters'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - MaxMasters
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+  - 
+    name: SpaceTemp
+    get:
+      path: '/api/v1/device/{deviceId}/SpaceTemp'
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: 
+            - SpaceTemp
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
+    put:
+      path: '/api/v1/device/{deviceId}/SpaceTemp'
+      parameterNames: ["SpaceTemp"]
+      responses:
+        - 
+          code: '200'
+          description: Success
+          expectedValues: []
+        - 
+          code: '400'
+          description: Bad request
+          expectedValues: []
+        - 
+          code: '404'
+          description: Not found
+          expectedValues: []
+        - 
+          code: '500'
+          description: Failed transaction
+          expectedValues: []
